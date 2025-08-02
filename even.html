@@ -1,0 +1,19 @@
+<body>
+    <script>
+      let num = prompt("Enter a number to check if it is even or odd:");
+      num = Number(num); // convert to number
+  
+      let result = "";
+  
+      if (isNaN(num)) {
+        result = "That is not a valid number.";
+      } else if (num % 2 === 0) {
+        result = num + " is even.";
+      } else {
+        result = num + " is odd.";
+      }
+  
+      document.write(result); // shows result on the page
+    </script>
+  </body>
+  
