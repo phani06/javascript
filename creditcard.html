@@ -1,0 +1,17 @@
+<script>
+    
+/*
+WAP to print Credit-card number
+Input:  '1111222233334444'
+Output: '1111-2222-3333-4444'
+*/
+
+let cardNumber = '1111222233334444';
+
+// Match groups of 4 characters and join them with '-'
+let formatted = cardNumber.match(/.{1,4}/g).join('-');
+
+console.log("Formatted Credit Card Number:", formatted);
+
+
+</script>

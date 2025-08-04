@@ -1,0 +1,27 @@
+<script>
+    class Student {
+        firstName = 'Virat';
+        lastName = 'Kohli';
+
+        // Regular method — 'this' depends on how it's called
+        fullName1() {
+            console.log('fullName1:', this.firstName, this.lastName, this);
+        }
+
+        // Arrow function — 'this' is lexically bound (based on where it's defined)
+        fullName2 = () => {
+            console.log('fullName2:', this.firstName, this.lastName, this);
+        }
+    }
+
+    // Create instance
+    let std1 = new Student();
+
+    // Direct calls (both will work correctly)
+    std1.fullName1(); // 'this' = std1
+    std1.fullName2(); // 'this' = std1
+
+    // setTimeout calls
+    setTimeout(std1.fullName1, 2000); // 'this' = window (or undefined in strict mode)
+    setTimeout(std1.fullName2, 4000); //  'this' = std1 (because it's an arrow function)
+</script>

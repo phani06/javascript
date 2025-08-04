@@ -1,0 +1,20 @@
+<script>
+    
+/* 
+WAP to print a string in title case
+Input:  'this is javascript class'
+Output: 'This Is Javascript Class'
+*/
+
+let str = 'this is javascript class';        // Original input string
+let words = str.split(' ');                  // Split string into array of words
+
+for (let i = 0; i < words.length; i++) {
+    let word = words[i];                     // Get each word
+    words[i] = word.charAt(0).toUpperCase()  // Capitalize the first character
+                + word.slice(1).toLowerCase(); // Add the rest of the word in lowercase
+}
+
+let fullname = words.join(' ');          // Join the array back into a string
+console.log("Title Case:", fullname);    // Print the result
+</script>

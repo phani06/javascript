@@ -1,0 +1,18 @@
+<script>
+    /*WAP to print Account number
+   input:- '12345678987'
+   output:- '12*******87'*/
+
+let accNumber = '12345678987';
+
+let firstTwo = accNumber.slice(0, 2);
+let lastTwo = accNumber.slice(-2);
+let middleStars = '*'.repeat(accNumber.length - 4);
+
+let maskedAcc = firstTwo + middleStars + lastTwo;
+
+console.log("Masked Account Number:", maskedAcc);
+
+
+
+</script>

@@ -1,0 +1,14 @@
+<script>
+    let user={
+        firstName: 'phani',
+        lastName: 'telu',
+        fullName1: function(){ //regular function how/where
+            console.log(this.fristName, this.lastName, this); // this value is user
+        },
+        fullName2: () => {
+            console.log(this.firstName, this.lastName, this); //this-window
+        }
+    }
+    user.fullName1();
+    user.fullName2();
+</script>

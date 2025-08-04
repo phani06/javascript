@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">btn-1</button>
+    <button id="btn2">btn-2</button>
+    <button id="btn3">btn-3</button>
+    <button id="btn4">btn-4</button>
+
+    <script>
+        function changeColor() { // regular function over her this is dynamic since its changing whenever we click the on the button its chnaging red 
+            this.style.backgroundcolor = 'red';
+        }
+        document.getElementById('btn1').addEventListener('click',changecolor);
+        document.getElementById('btn2').addEventListener('click',changecolor);
+        document.getElementById('btn3').addEventListener('click',changecolor);
+        document.getElementById('btn4').addEventListener('click',changecolor);
+
+    </script>
+</body>
+</html>
