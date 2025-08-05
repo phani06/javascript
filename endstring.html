@@ -1,0 +1,11 @@
+//WAP to move all the special characters to the end of the string
+	input:- 'hello@#hi&'
+   output:- 'hellohi@#&'//
+
+<script>
+   let input='hello@#hi&';
+   let alphaNumeric = input.replace(/[^a-zA-Z0-9]/g, '');
+   let specialChars = input.replace(/[a-zA-Z0-9]/g, '');
+   let result = alphaNumeric + specialChars;
+   console.log(result); 
+   </script>
